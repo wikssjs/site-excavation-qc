@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /soumission-excavation/
+
+Sitemap: https://experts-excavation.ca/sitemap-index.xml
