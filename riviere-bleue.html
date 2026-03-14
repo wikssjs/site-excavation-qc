@@ -11,7 +11,7 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_CA">
 <meta property="og:site_name" content="Experts Excavation">
-<meta property="article:modified_time" content="2026-02-28">
+<meta property="article:modified_time" content="2026-03-14">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Excavation Rivière-Bleue 2026 — Terrassement & Drainage | Experts Excavation">
 <meta name="twitter:description" content="Comparez jusqu'à 5 soumissions gratuites d'excavateurs à Rivière-Bleue. Terrassement dès 1009$. Entrepreneurs certifiés RBQ, réponse en 24h.">
@@ -126,7 +126,7 @@
       <div class="lg:col-span-3 space-y-5">
         <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-500/20 border border-primary-400/30 backdrop-blur-sm">
           <span class="w-2 h-2 rounded-full ex-pulse" style="background:var(--p4, #60a5fa)"></span>
-          <span class="text-primary-200 text-sm font-semibold">8 soumissions demandées cette semaine</span>
+          <span class="text-primary-200 text-sm font-semibold">14 soumissions demandées cette semaine</span>
         </div>
         <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-[1.05]"
             style="text-shadow:0 2px 16px rgba(0,0,0,0.85)">
@@ -211,7 +211,7 @@
       </div>
       <div class="flex items-center gap-1">
         <span class="w-1.5 h-1.5 rounded-full" style="animation:ex-pulse-dot 2s infinite;background:var(--p5)"></span>
-        <span class="text-[11px] font-bold text-primary-600">8 soumissions demandées cette semaine</span>
+        <span class="text-[11px] font-bold text-primary-600">14 soumissions demandées cette semaine</span>
       </div>
     </div>
     <button onclick="(function(){var el=document.getElementById('formulaire');if(el){el.scrollIntoView({behavior:'smooth'});}})();"
@@ -430,21 +430,21 @@
       <div>
         <h4 class="font-bold text-white mb-5 uppercase tracking-widest text-xs">Excavation en Bas-Saint-Laurent (01)</h4>
         <div class="flex flex-wrap gap-2 text-xs leading-loose">
-          <a href="/lac-a-la-croix" class="hover:text-white transition-colors">Lac-à-la-Croix</a>
-          <a href="/sainte-jeanne-d-arc-de-la-mitis" class="hover:text-white transition-colors">Sainte-Jeanne-d'Arc-de-la-Mitis</a>
-          <a href="/saint-tharcisius" class="hover:text-white transition-colors">Saint-Tharcisius</a>
-          <a href="/saint-paul-de-la-croix" class="hover:text-white transition-colors">Saint-Paul-de-la-Croix</a>
-          <a href="/saint-rene-de-matane" class="hover:text-white transition-colors">Saint-René-de-Matane</a>
-          <a href="/saint-modeste" class="hover:text-white transition-colors">Saint-Modeste</a>
+          <a href="/albertville" class="hover:text-white transition-colors">Albertville</a>
+          <a href="/saint-antonin" class="hover:text-white transition-colors">Saint-Antonin</a>
           <a href="/saint-pierre-de-lamy" class="hover:text-white transition-colors">Saint-Pierre-de-Lamy</a>
-          <a href="/pohenegamook" class="hover:text-white transition-colors">Pohénégamook</a>
-          <a href="/saint-eusebe" class="hover:text-white transition-colors">Saint-Eusèbe</a>
-          <a href="/sainte-marguerite-marie" class="hover:text-white transition-colors">Sainte-Marguerite-Marie</a>
-          <a href="/saint-mathieu-de-rioux" class="hover:text-white transition-colors">Saint-Mathieu-de-Rioux</a>
-          <a href="/routhierville" class="hover:text-white transition-colors">Routhierville</a>
-          <a href="/saint-philippe-de-neri" class="hover:text-white transition-colors">Saint-Philippe-de-Néri</a>
-          <a href="/ruisseau-des-mineurs" class="hover:text-white transition-colors">Ruisseau-des-Mineurs</a>
-          <a href="/saint-alexandre-des-lacs" class="hover:text-white transition-colors">Saint-Alexandre-des-Lacs</a>
+          <a href="/metis-sur-mer" class="hover:text-white transition-colors">Métis-sur-Mer</a>
+          <a href="/saint-epiphane" class="hover:text-white transition-colors">Saint-Épiphane</a>
+          <a href="/rimouski" class="hover:text-white transition-colors">Rimouski</a>
+          <a href="/la-pocatiere" class="hover:text-white transition-colors">La Pocatière</a>
+          <a href="/saint-germain-de-kamouraska" class="hover:text-white transition-colors">Saint-Germain-de-Kamouraska</a>
+          <a href="/la-trinite-des-monts" class="hover:text-white transition-colors">La Trinité-des-Monts</a>
+          <a href="/grosses-roches" class="hover:text-white transition-colors">Grosses-Roches</a>
+          <a href="/saint-marc-du-lac-long" class="hover:text-white transition-colors">Saint-Marc-du-Lac-Long</a>
+          <a href="/sainte-paule" class="hover:text-white transition-colors">Sainte-Paule</a>
+          <a href="/riviere-patapedia-est" class="hover:text-white transition-colors">Rivière-Patapédia-Est</a>
+          <a href="/notre-dame-du-portage" class="hover:text-white transition-colors">Notre-Dame-du-Portage</a>
+          <a href="/sainte-rita" class="hover:text-white transition-colors">Sainte-Rita</a>
         </div>
       </div>
       <div>
@@ -470,9 +470,10 @@ var _stepLabels = {
   1: "Type de travaux",  2: "Votre propriété",  3: "Délai souhaité",  4: "Vos coordonnées"};
 
 /* Identifie les champs radio_cards par groupe pour la validation */
+/* IMPORTANT: capturer l'index de la boucle externe avec set AVANT la boucle interne */
 var _radioGroups = [
     {step: 1, name: "type-travaux", error: "travaux-error"},
-    {step: 1, name: "delai", error: "delai-error"},
+    {step: 3, name: "delai", error: "delai-error"},
 ];
 
 function _updateDots(n) {

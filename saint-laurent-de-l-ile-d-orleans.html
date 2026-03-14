@@ -7,21 +7,21 @@
 <meta name="robots" content="index, follow">
 <meta property="og:title" content="Excavation à Saint-Laurent-de-l'Île-d'Orléans — Entrepreneurs Certifiés RBQ | Experts Excavation">
 <meta property="og:description" content="Prix excavation Saint-Laurent-de-l'Île-d'Orléans 2026 : terrassement dès 1041$, excavation complète dès 2291$. Comparez 5 soumissions gratuites.">
-<meta property="og:image" content="https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop">
+<meta property="og:image" content="https://cdn.stocksnap.io/img-thumbs/960w/metal-texture_JDARIGGPER.jpg">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_CA">
 <meta property="og:site_name" content="Experts Excavation">
-<meta property="article:modified_time" content="2026-02-28">
+<meta property="article:modified_time" content="2026-03-14">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Excavation à Saint-Laurent-de-l'Île-d'Orléans — Entrepreneurs Certifiés RBQ | Experts Excavation">
 <meta name="twitter:description" content="Prix excavation Saint-Laurent-de-l'Île-d'Orléans 2026 : terrassement dès 1041$, excavation complète dès 2291$. Comparez 5 soumissions gratuites.">
-<meta name="twitter:image" content="https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop">
+<meta name="twitter:image" content="https://cdn.stocksnap.io/img-thumbs/960w/metal-texture_JDARIGGPER.jpg">
 <meta name="geo.region" content="CA-QC">
 <meta name="geo.placename" content="Saint-Laurent-de-l'Île-d'Orléans">
 <link rel="canonical" href="https://experts-excavation.ca/saint-laurent-de-l-ile-d-orleans">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="preload" as="image" href="https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop"><link rel="preconnect" href="https://images.pexels.com" crossorigin><title>Excavation à Saint-Laurent-de-l'Île-d'Orléans — Entrepreneurs Certifiés RBQ | Experts Excavation</title>
+<link rel="preload" as="image" href="https://cdn.stocksnap.io/img-thumbs/960w/metal-texture_JDARIGGPER.jpg"><title>Excavation à Saint-Laurent-de-l'Île-d'Orléans — Entrepreneurs Certifiés RBQ | Experts Excavation</title>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-XXXXXXXXXX');</script>
 <link rel="stylesheet" href="/style.css">
@@ -113,7 +113,7 @@
 
 
 <section class="relative min-h-[600px] flex items-center py-16 sm:py-20 overflow-hidden ex-de4116">
-  <img src="https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg?auto=compress&cs=tinysrgb&w=1200&h=600&fit=crop" alt="Chantier d'excavation à Saint-Laurent-de-l'Île-d'Orléans, Québec"
+  <img src="https://cdn.stocksnap.io/img-thumbs/960w/metal-texture_JDARIGGPER.jpg" alt="Chantier d'excavation à Saint-Laurent-de-l'Île-d'Orléans, Québec"
        class="absolute inset-0 w-full h-full object-cover"
        loading="eager" width="1200" height="600" fetchpriority="high">
   <div class="absolute inset-0" style="background:rgba(15,23,42,0.72)"></div>
@@ -470,9 +470,10 @@ var _stepLabels = {
   1: "Type de travaux",  2: "Votre propriété",  3: "Délai souhaité",  4: "Vos coordonnées"};
 
 /* Identifie les champs radio_cards par groupe pour la validation */
+/* IMPORTANT: capturer l'index de la boucle externe avec set AVANT la boucle interne */
 var _radioGroups = [
     {step: 1, name: "type-travaux", error: "travaux-error"},
-    {step: 1, name: "delai", error: "delai-error"},
+    {step: 3, name: "delai", error: "delai-error"},
 ];
 
 function _updateDots(n) {

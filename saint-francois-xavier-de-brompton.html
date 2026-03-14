@@ -11,7 +11,7 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_CA">
 <meta property="og:site_name" content="Experts Excavation">
-<meta property="article:modified_time" content="2026-02-28">
+<meta property="article:modified_time" content="2026-03-14">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Soumissions Excavation Saint-François-Xavier-de-Brompton 2026 | Certifiés RBQ | Experts Excavation">
 <meta name="twitter:description" content="Trouvez le meilleur excavateur à Saint-François-Xavier-de-Brompton en 2026. Comparez les prix, vérifiez les licences RBQ et réservez en ligne.">
@@ -470,9 +470,10 @@ var _stepLabels = {
   1: "Type de travaux",  2: "Votre propriété",  3: "Délai souhaité",  4: "Vos coordonnées"};
 
 /* Identifie les champs radio_cards par groupe pour la validation */
+/* IMPORTANT: capturer l'index de la boucle externe avec set AVANT la boucle interne */
 var _radioGroups = [
     {step: 1, name: "type-travaux", error: "travaux-error"},
-    {step: 1, name: "delai", error: "delai-error"},
+    {step: 3, name: "delai", error: "delai-error"},
 ];
 
 function _updateDots(n) {
