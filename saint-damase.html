@@ -117,7 +117,7 @@
        class="absolute inset-0 w-full h-full object-cover"
        loading="eager" width="1200" height="600" fetchpriority="high">
   <div class="absolute inset-0" style="background:rgba(15,23,42,0.25)"></div>
-  <div class="absolute inset-0" style="background:linear-gradient(to right,rgba(15,23,42,0.75) 0%,rgba(15,23,42,0.35) 55%,rgba(15,23,42,0) 100%)"></div>
+  <div class="absolute inset-0" style="background:linear-gradient(to right,rgba(15,23,42,0.72) 0%,rgba(15,23,42,0.35) 55%,rgba(15,23,42,0) 100%)"></div>
 
   <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 w-full">
     <div class="grid lg:grid-cols-5 gap-10 lg:gap-16 items-center">
@@ -579,12 +579,6 @@ if (_stickyBar) {
   window.addEventListener('scroll', function() {
     if (_formEl) {
       var rect = _formEl.getBoundingClientRect();
-      _stickyBar.style.display = (rect.top < window.innerHeight && rect.bottom > 0) ? 'none' : '';
-    }
-  }, {passive: true});
-}
-</script></body>
-</html>tBoundingClientRect();
       _stickyBar.style.display = (rect.top < window.innerHeight && rect.bottom > 0) ? 'none' : '';
     }
   }, {passive: true});
