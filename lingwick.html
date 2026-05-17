@@ -11,7 +11,7 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_CA">
 <meta property="og:site_name" content="Experts Excavation">
-<meta property="article:modified_time" content="2026-05-08">
+<meta property="article:modified_time" content="2026-05-17">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Excavation Lingwick | Terrassement, Fondation, Piscine | Experts Excavation">
 <meta name="twitter:description" content="Vous planifiez des travaux d'excavation à Lingwick? Entrepreneurs RBQ vérifiés — soumission gratuite, réponse garantie en 24h.">
@@ -90,10 +90,12 @@
         <span class="w-1.5 h-1.5 rounded-full ex-pulse" style="background:var(--p5)"></span>
         Soumission gratuite
       </span>
-      <a href="/soumission-excavation/" target="_blank" rel="noopener sponsored"
-         class="ex-btn-primary px-5 py-2.5 text-white text-sm font-bold rounded-full">
-        Obtenir un prix
-      </a>
+      <div class="hidden sm:flex">
+        <a href="/soumission-excavation/" target="_blank" rel="noopener sponsored"
+           class="ex-btn-primary px-5 py-2.5 text-white text-sm font-bold rounded-full">
+          Obtenir un prix
+        </a>
+      </div>
     </div>
   </div>
 </nav>
@@ -225,6 +227,7 @@
   </div>
 </div>
 <div class="h-28 sm:hidden"></div>
+
 <!-- SERVICES -->
 <section class="py-20 sm:py-28 bg-slate-50/60 ex-1c0b35">
   <div class="max-w-6xl mx-auto px-4 sm:px-6">
@@ -550,13 +553,14 @@ function nextStep(n) {
 
 function prevStep(n) { showStep(n); }
 
-/* Soumission AJAX Netlify */
+/* Soumission AJAX */
+var _submitUrl = '/';
 var _form = document.getElementById('empire-form');
 if (_form) {
   _form.addEventListener('submit', function(e) {
     e.preventDefault();
     var data = new FormData(_form);
-    fetch('/', {
+    fetch(_submitUrl, {
       method: 'POST',
       headers: {'Content-Type': 'application/x-www-form-urlencoded'},
       body: new URLSearchParams(data).toString()
