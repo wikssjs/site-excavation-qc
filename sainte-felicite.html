@@ -881,4 +881,57 @@ if (_stickyBar) {
   }, {passive: true});
 }
 </script></body>
+</html>) {
+      valid = false;
+      if (rg.error) {
+        var errEl = document.getElementById(rg.error);
+        if (errEl) {
+          errEl.classList.remove('hidden');
+          setTimeout(function() { errEl.classList.add('hidden'); }, 3000);
+        }
+      }
+    }
+  });
+
+  if (!valid) return;
+  showStep(n);
+}
+
+function prevStep(n) { showStep(n); }
+
+/* Soumission AJAX */
+var _submitUrl = '/';
+var _form = document.getElementById('empire-form');
+if (_form) {
+  _form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    var data = new FormData(_form);
+    fetch(_submitUrl, {
+      method: 'POST',
+      headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+      body: new URLSearchParams(data).toString()
+    }).then(function() {
+      document.querySelectorAll('.ex-form-step').forEach(function(s) { s.classList.remove('active'); });
+      var merci = document.getElementById('step-merci');
+      if (merci) merci.classList.add('active');
+      _updateDots(_totalSteps + 1);
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'lead_qualifie', {event_category: 'lead', event_label: 'Sainte-Félicité', event_value: 1});
+      }
+    }).catch(function() { _form.submit(); });
+  });
+}
+
+/* Masquer sticky bar au scroll vers le formulaire */
+var _stickyBar = document.getElementById('sticky-bar');
+if (_stickyBar) {
+  var _formEl = document.getElementById('formulaire');
+  window.addEventListener('scroll', function() {
+    if (_formEl) {
+      var rect = _formEl.getBoundingClientRect();
+      _stickyBar.style.display = (rect.top < window.innerHeight && rect.bottom > 0) ? 'none' : '';
+    }
+  }, {passive: true});
+}
+</script></body>
 </html>
