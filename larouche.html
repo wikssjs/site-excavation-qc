@@ -180,7 +180,7 @@
           <span class="w-2 h-2 rounded-full ex-pulse" style="background:var(--p4, #60a5fa)"></span>
           <span class="text-primary-200 text-sm font-semibold">7 soumissions demandées cette semaine</span>
         </div>
-        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-white leading-[1.05]"
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white leading-[1.05]"
             style="text-shadow:0 2px 16px rgba(0,0,0,0.85)">
           Excavation<br><span class="text-primary-400">Larouche</span>
         </h1>
@@ -282,27 +282,27 @@
 
 <!-- ─── STICKY CTA MOBILE (identique pour les 3 variantes) ──────────────── -->
 <div class="fixed bottom-0 left-0 right-0 sm:hidden z-50" id="sticky-bar">
-  <div class="bg-white/98 backdrop-blur-xl border-t border-slate-100 shadow-[0_-4px_24px_rgba(0,0,0,0.12)] px-4 pt-3 pb-4">
-    <div class="flex items-center justify-between mb-2.5">
-      <div>
-        <p class="text-xs font-black text-slate-800">Excavation Larouche</p>
-        <p class="text-[11px] text-slate-400">Gratuit · Sans engagement · Réponse en 24h</p>
+  <div class="bg-white/98 backdrop-blur-xl border-t border-slate-100 shadow-[0_-4px_24px_rgba(0,0,0,0.12)] px-4 py-3">
+    <div class="flex items-center justify-between mb-2 gap-3">
+      <div class="min-w-0 flex-1">
+        <p class="text-xs font-black text-slate-800 truncate">Excavation Larouche</p>
+        <p class="text-[10px] text-slate-400 truncate">Gratuit · Sans engagement · Réponse en 24h</p>
       </div>
-      <div class="flex items-center gap-1">
+      <div class="flex items-center gap-1 shrink-0">
         <span class="w-1.5 h-1.5 rounded-full" style="animation:ex-pulse-dot 2s infinite;background:var(--p5)"></span>
-        <span class="text-[11px] font-bold text-primary-600">7 soumissions demandées cette semaine</span>
+        <span class="text-[10px] font-bold text-primary-600">7 soumissions demandées cette semaine</span>
       </div>
     </div>
     <button onclick="(function(){var el=document.getElementById('formulaire');if(el){el.scrollIntoView({behavior:'smooth'});}})();"
-      class="ex-btn-primary w-full py-4 text-white font-black text-base rounded-full flex items-center justify-center gap-2">
-      <svg class="w-5 h-5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      class="ex-btn-primary w-full py-3 text-white font-bold text-sm rounded-full flex items-center justify-center gap-2">
+      <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
       </svg>
       Obtenir mes soumissions gratuites
     </button>
   </div>
 </div>
-<div class="h-28 sm:hidden"></div>
+<div class="sm:hidden" style="height:5.5rem"></div>
 <section class="" style="padding:3rem 0 3.5rem;background:#fff;border-bottom:1px solid #e2e8f0">
   <div style="max-width:72rem;margin:0 auto;padding:0 1rem">
     <div class="ex-city-intro">
@@ -573,7 +573,7 @@
 <!-- SERVICES -->
 <section class="py-20 sm:py-28 bg-slate-50/60 ex-9c8c8f">
   <div class="max-w-6xl mx-auto px-4 sm:px-6">
-    <h2 class="text-3xl font-black text-center text-slate-800 mb-10">Services d'excavation disponibles à Larouche</h2>
+    <h2 class="text-2xl sm:text-3xl font-black text-center text-slate-800 mb-10">Services d'excavation disponibles à Larouche</h2>
     <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
       <div class="ex-card-hover bg-white rounded-2xl border border-slate-100 shadow-sm p-6">
         <div class="mb-3" style="width:2.25rem;height:2.25rem;color:var(--primary-600,#2563eb)"><svg style="width:100%;height:100%" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-droplet"/></svg></div>
@@ -656,8 +656,8 @@
 <section class="py-20 sm:py-28 bg-white ex-3baf03">
   <div class="max-w-6xl mx-auto px-4 sm:px-6">
     <div class="text-center mb-12">
-      <h2 class="text-3xl sm:text-4xl font-black text-slate-800">Prix excavation à Larouche — 2026</h2>
-      <p class="mt-3 text-slate-500 text-lg">Estimations locales selon le type de travaux et la superficie</p>
+      <h2 class="text-2xl sm:text-4xl font-black text-slate-800">Prix excavation à Larouche — 2026</h2>
+      <p class="mt-3 text-slate-500 text-base sm:text-lg">Estimations locales selon le type de travaux et la superficie</p>
     </div>
 
     <!-- Cartes principales -->
@@ -704,10 +704,10 @@
          style="background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.2)">
       <svg class="w-8 h-8 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
     </div>
-    <h2 class="text-3xl sm:text-4xl font-black mb-4">Prêt à démarrer votre projet à Larouche ?</h2>
-    <p class="text-lg mb-8 text-primary-200">Soumission gratuite · Réponse en 24h · Entrepreneurs certifiés RBQ</p>
+    <h2 class="text-2xl sm:text-4xl font-black mb-4">Prêt à démarrer votre projet à Larouche ?</h2>
+    <p class="text-base sm:text-lg mb-8 text-primary-200">Soumission gratuite · Réponse en 24h · Entrepreneurs certifiés RBQ</p>
     <a href="/soumission-excavation/" target="_blank" rel="noopener sponsored"
-       class="inline-flex items-center gap-2 px-10 py-5 text-white font-black text-lg rounded-full shadow-2xl transition-all hover:opacity-90"
+       class="inline-flex items-center gap-2 px-8 py-3.5 text-white font-black text-base sm:text-lg rounded-full shadow-2xl transition-all hover:opacity-90"
        style="background:var(--p5)">
       <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
       Obtenir mes soumissions gratuites
