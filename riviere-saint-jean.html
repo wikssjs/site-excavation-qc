@@ -870,4 +870,28 @@ if (_stickyBar) {
   }, {passive: true});
 }
 </script></body>
+</html>hen(function() {
+      document.querySelectorAll('.ex-form-step').forEach(function(s) { s.classList.remove('active'); });
+      var merci = document.getElementById('step-merci');
+      if (merci) merci.classList.add('active');
+      _updateDots(_totalSteps + 1);
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'lead_qualifie', {event_category: 'lead', event_label: 'Rivière-Saint-Jean', event_value: 1});
+      }
+    }).catch(function() { _form.submit(); });
+  });
+}
+
+/* Masquer sticky bar au scroll vers le formulaire */
+var _stickyBar = document.getElementById('sticky-bar');
+if (_stickyBar) {
+  var _formEl = document.getElementById('formulaire');
+  window.addEventListener('scroll', function() {
+    if (_formEl) {
+      var rect = _formEl.getBoundingClientRect();
+      _stickyBar.style.display = (rect.top < window.innerHeight && rect.bottom > 0) ? 'none' : '';
+    }
+  }, {passive: true});
+}
+</script></body>
 </html>
