@@ -173,7 +173,7 @@
       <div class="lg:col-span-3 space-y-5">
         <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-500/20 border border-primary-400/30 backdrop-blur-sm">
           <span class="w-2 h-2 rounded-full ex-pulse" style="background:var(--p4, #60a5fa)"></span>
-          <span class="text-primary-200 text-sm font-semibold">14 soumissions demandées cette semaine</span>
+          <span class="text-primary-200 text-sm font-semibold">3 soumissions demandées cette semaine</span>
         </div>
         <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black text-white leading-[1.05]"
             style="text-shadow:0 2px 16px rgba(0,0,0,0.85)">
@@ -279,7 +279,7 @@
      style="background:#fff;border-top:1px solid #e2e8f0;padding:0.625rem 1rem 0.75rem">
   <div class="flex items-center justify-between mb-1.5">
     <p class="text-xs font-bold text-slate-700 truncate min-w-0 flex-1 mr-3">Excavation — Sainte-Sabine</p>
-    <span class="text-[10px] font-semibold shrink-0" style="color:var(--p6)">14 soumissions demandées cette semaine</span>
+    <span class="text-[10px] font-semibold shrink-0" style="color:var(--p6)">3 soumissions demandées cette semaine</span>
   </div>
   <a href="/soumission-excavation/" target="_blank" rel="noopener sponsored"
      style="display:block;width:100%;background:var(--p6);color:#fff;font-weight:700;font-size:.875rem;padding:.625rem 1rem;border-radius:.625rem;text-align:center">
@@ -833,39 +833,6 @@ function prevStep(n) { showStep(n); }
 /* Soumission AJAX */
 var _submitUrl = '/';
 var _form = document.getElementById('empire-form');
-if (_form) {
-  _form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    var data = new FormData(_form);
-    fetch(_submitUrl, {
-      method: 'POST',
-      headers: {'Content-Type': 'application/x-www-form-urlencoded'},
-      body: new URLSearchParams(data).toString()
-    }).then(function() {
-      document.querySelectorAll('.ex-form-step').forEach(function(s) { s.classList.remove('active'); });
-      var merci = document.getElementById('step-merci');
-      if (merci) merci.classList.add('active');
-      _updateDots(_totalSteps + 1);
-      if (typeof gtag !== 'undefined') {
-        gtag('event', 'lead_qualifie', {event_category: 'lead', event_label: 'Sainte-Sabine', event_value: 1});
-      }
-    }).catch(function() { _form.submit(); });
-  });
-}
-
-/* Masquer sticky bar au scroll vers le formulaire */
-var _stickyBar = document.getElementById('sticky-bar');
-if (_stickyBar) {
-  var _formEl = document.getElementById('formulaire');
-  window.addEventListener('scroll', function() {
-    if (_formEl) {
-      var rect = _formEl.getBoundingClientRect();
-      _stickyBar.style.display = (rect.top < window.innerHeight && rect.bottom > 0) ? 'none' : '';
-    }
-  }, {passive: true});
-}
-</script></body>
-</html>t.getElementById('empire-form');
 if (_form) {
   _form.addEventListener('submit', function(e) {
     e.preventDefault();
